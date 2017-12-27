@@ -1,0 +1,23 @@
+body {
+            color: red;
+            font-family: 'Verdana','Arial', 'Geneva';
+            font-weight: normal;
+            }
+
+            h1,h2 {
+            border-bottom: 1px solid black;
+            }
+
+            .blue {
+            color: blue;
+            font-size: 25px;
+
+            }
+            p.green {
+            color: green;
+            font-size: 25px;
+
+            }
+            .underline {
+            text-decoration: underline;
+            }

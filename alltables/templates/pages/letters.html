@@ -1,0 +1,474 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="http://kakoitosait.in.ua/letter/static/img/favicon.png">
+<style>
+    @font-face {
+        font-family: "OwnHand";
+        src: url(/static/fonts/OWNHAND.TTF);
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "Museo";
+        src: url(/static/fonts/museo/museo900.otf);
+        font-style: normal;
+        font-weight: 900;
+    }
+
+    @font-face {
+        font-family: "Museo";
+        src: url(/static/fonts/museo/museo100.otf);
+        font-style: normal;
+        font-weight: 100;
+    }
+
+    @font-face {
+        font-family: "Museo";
+        src: url(/static/fonts/museo/museo700.otf);
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "Museo";
+        src: url(/static/fonts/museo/museo500.otf);
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    @font-face {
+        font-family: "Museo";
+        src: url(/static/fonts/museo/museo300.otf);
+        font-style: normal;
+        font-weight: 300;
+    }
+
+    body {
+        font-family: "Museo";
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 135px;
+        color: #fff;
+    }
+
+    .div_h2 {
+        width: 300px;
+        margin: 0 auto;
+        background: url(/static/img/h2_before.png) center center no-repeat;
+    }
+
+    .main {
+        background: url(/static/img/bg_main.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .my_cont {
+        /*background: url(/static/img/bg_letter.png) center center no-repeat;*/
+        width: 100%;
+        height: auto;
+    }
+
+    .w_980 {
+        width: 980px;
+        margin: 0 auto;
+    }
+
+    .head_menu {
+        background: url(/static/img/head_menu.png) center bottom no-repeat;
+        margin: 0 auto;
+        width: 100%;
+        height: 72px;
+
+    }
+
+    .ul_menu {
+        color: #fff;
+        list-style: none;
+        display: inline;
+        padding: 36px 0 0 0;
+    }
+
+    .ul_menu li {
+        padding: 0px 20px 0 20px;
+        display: inline;
+    }
+
+    .div_menu {
+        padding: 23px 0 0 0;
+    }
+
+    .ul_menu li a {
+        text-shadow: 0 1px 2px #000;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 10px 20px 10px 20px;
+        height: 32px;
+        font-weight: 100;
+        letter-spacing: 1px;
+
+    }
+
+    .ul_menu li a:hover {
+        text-shadow: 0px 2px 2px black, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #228DFF, 0 0 30px #228DFF, 0 0 30px #228DFF, 0 0 80px #228DFF, 0 0 90px #228DFF, 0 0 150px #228DFF;
+        height: 32px;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .ul_menu li:hover {
+
+    }
+
+    .ul_menu li:nth-child(3) {
+        margin: 0 0 0 80px;
+    }
+
+    .blocnot {
+        width: 680px;
+        height: 580px;
+        background: #e8d49f;
+        border-radius: 35px;
+        margin: -25px 0 0 24px;
+        box-shadow: 0 5px 0px #f4e7c2;
+        opacity: 1;
+    }
+
+    .blct_cont {
+        height: 460px;
+        background: url(/static/img/letter_line.png) repeat-y;
+        padding: 0px 20px 0 0;
+        margin: 7.5% 6% 0 3%;
+        overflow-y: scroll;
+        position: absolute;
+        color: #5b3c16;
+        font-size: 17px;
+        line-height: 41px;
+        width: 85%;
+        border: 0;
+        resize: none;
+        outline: none;
+        font-family: "OwnHand";
+
+    }
+
+    .blct_cont::-webkit-scrollbar {
+        width: 11px;
+    }
+
+    .blct_cont::-webkit-scrollbar-track {
+        background: url(/static/img/scroll_line.png) center center repeat-y;
+
+    }
+
+    .blct_cont::-webkit-scrollbar-thumb {
+        background: url(/static/img/scroll.png) top center no-repeat;
+        width: 11px;
+        height: 11px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 11px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: url(/static/img/scroll_line.png) center center repeat-y;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: url(/static/img/scroll.png) top center no-repeat;
+        width: 11px;
+        height: 11px;
+    }
+
+    .avatar {
+        background: url(/static/img/avatar.png) center center no-repeat;
+        width: 240px;
+        height: 235px;
+        margin: -30px auto 0 8px;
+    }
+    .avatar_css{
+        position: relative;
+        width: 220px;
+        height: 220px;
+        margin: -26px auto 0 17px;
+        background: rgba(26,26,26,1);
+        background: -moz-linear-gradient(top, rgba(26,26,26,1) 0%, rgba(8,8,8,1) 53%, rgba(0,0,0,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(26,26,26,1)), color-stop(53%, rgba(8,8,8,1)), color-stop(100%, rgba(0,0,0,1)));
+        background: -webkit-linear-gradient(top, rgba(26,26,26,1) 0%, rgba(8,8,8,1) 53%, rgba(0,0,0,1) 100%);
+        background: -o-linear-gradient(top, rgba(26,26,26,1) 0%, rgba(8,8,8,1) 53%, rgba(0,0,0,1) 100%);
+        background: -ms-linear-gradient(top, rgba(26,26,26,1) 0%, rgba(8,8,8,1) 53%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom, rgba(26,26,26,1) 0%, rgba(8,8,8,1) 53%, rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1a1a', endColorstr='#000000', GradientType=0 );
+        border-radius: 23%;
+        opacity: 1;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 1);
+        cursor: pointer;
+    }
+    .avatar_css img{
+        margin: 28px 0 0 -5px;
+        border-radius: 29%;
+    }
+    
+    .name {
+        color: #fff;
+        margin: 11px 0px 0 31px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .sub_name {
+        font-size: 12px;
+        color: #366b85;
+        text-shadow: 0 1px 2px #000;
+        line-height: 22px;
+        letter-spacing: .7px;
+        font-weight: 500;
+    }
+
+    .user_info {
+        margin: 28px 0px 0 31px;
+        font-size: 15px;
+        color: #fff;
+        font-weight: 100;
+        opacity: 0.9;
+        letter-spacing: 0.7px;
+    }
+
+    .user_info .stat {
+        opacity: 0.4;
+    }
+
+    .send_to {
+        margin: 51px auto 0 auto;
+        color: #e8d49f;
+        font-size: 16px;
+        padding: 0 0 0 51px;
+
+    }
+
+    .choose {
+        color: #2f4e5f;
+        font-weight: 300;
+        background: url(/static/img/heart.png) 92% 55% no-repeat rgba(15, 45, 66, 0.71);
+        padding: 10px 20px;
+        width: 220px;
+        height: 40px;
+        border-radius: 40px;
+        margin: 4px 0 0 -30px;
+        border: 0;
+        outline: none;
+    }
+
+    .choose::-webkit-input-placeholder {
+        color: #2f4e5f;
+    }
+
+    .send_it {
+        cursor: pointer;
+        margin: 29px 0 0 30px;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 500;
+        text-shadow: 0 1px 1px #000, 0 0px 20px #3bc2e8, 0 0px 50px #3bc2e8;
+    }
+
+    .send_it:hover {
+        text-shadow: 0px 1px 1px black, 0 0 10px #3bc2e8, 0 0 20px #3bc2e8, 0 0 30px #3bc2e8, 0 0 40px #3bc2e8, 0 0 70px #3bc2e8;
+    }
+
+    .settings {
+        color: #e8d49f;
+        margin: -50px 0px 0 0px;
+        position: relative;
+        font-size: 13px;
+        cursor: pointer;
+        font-weight: 700;
+        letter-spacing: .7px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.54);
+        height: 50px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        padding: 15px 0 0 0;
+        display: none;
+    }
+
+    .settings i {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .footer {
+        min-height: 100px;
+    }
+
+    @-webkit-keyframes neon {
+        from {
+            text-shadow: 0 1px 1px #000, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+        }
+        to {
+            text-shadow: 0 1px 1px #000, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+        }
+    }
+
+    .neon {
+        text-decoration: none;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .neon:hover {
+        -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon 1.5s ease-in-out infinite alternate;
+        animation: neon 1.5s ease-in-out infinite alternate;
+
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+(function () {
+    'use strict';
+
+    function domReady() {
+      initSettings();
+    }
+    
+    function initSettings(){
+       $(document).on('mouseover', '.avatar_css, .settings, .avatar_css img', function (e) {
+               var dsp = $('.settings').css('display');
+               dsp=='none' ? $('.settings').slideDown('slow') : '';			                  
+       });
+       $(document).on('mouseout', function(e) {
+            if (!$(e.target).closest(".avatar_css").length) {
+                $('.settings').slideUp('slow')
+            }
+       e.stopPropagation();
+       });
+    }
+
+    $(domReady);
+})();
+</script>
+<div class="main">
+    <div class="my_cont w_980">
+
+        <div class="head_menu">
+            <div class="row div_menu">
+                <div class="col-sm-12 text-center">
+                    <ul class="ul_menu">
+                        <li><a href="http://127.0.0.1:8000/account/login/">My characters</a></li>
+                        <li><a class="">My Owls</a></li>
+                        <li><a class="">Postbox</a></li>
+                        <li><a class="">Personal Area</a></li>
+                        <ul class="nav navbar-nav navbar-right">
+                            <div class="col-sm-12 text-center">
+                        <li><a class="">logout</a></li>
+                            </div>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+
+            {% block content %}
+            {% endblock content %}
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="div_h2">
+                        <h2>New letter</h2>
+                    </div>
+                </div>
+            </div>
+
+<form method="POST" action="" id="send_letter">{% csrf_token %}
+
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="avatar_css">
+                    <img src="/static/img/avatar_default.png"/>
+                    <div class="settings" ><i class="fa fa-cog"></i>&nbsp;&nbsp;options</div>
+                    </div>
+              <!--      <div class="avatar">
+                        <div class="settings"><i class="fa fa-cog"></i>&nbsp;&nbsp;options</div>
+                    </div>-->
+                    <div class="name text-center">Pigwidgeon
+                        <div class="sub_name">RON WEASLEY</div>
+                    </div>
+
+                    <div class="user_info">
+                        <div class="row text-center">
+                            <div class="col-sm-6 text-right">Age:</div>
+                            <div class="col-sm-6 text-left stat">2 years</div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-sm-6 text-right">Feature:</div>
+                            <div class="col-sm-6 text-left stat">Rapacity</div>
+                        </div>
+                    </div>
+                    <div class="send_to">
+                        <div class="row text-left">
+                            <div class="col-sm-12">Send to:</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-left">
+                                <input class="choose" placeholder="Tap to choose..." name="send_to"/>
+                            </div>
+                            <!--<div class="col-sm-12 text-left">-->
+                                <!--<input class="choose" placeholder="Tap to choose..." name="message"/>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <div class="send_it">
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                <div id="send_letter_form" class="send_btn">Send it!</div>
+                                <script>
+                                $(function() {
+                                    $('#send_letter_form').click(function() {
+                                        console.log('test');
+                                        $('#send_letter').submit()
+                                    });
+                                });
+                                </script>
+                                <!--<input type="submit" class="send_btn" value="Send it!">-->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-9">
+                    <div class="blocnot">
+                        <textarea class="blct_cont" name="message">
+
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+</form>
+
+        </div>
+        <div class="footer">
+        </div>
+
+    </div>
+</div>

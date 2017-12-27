@@ -1,0 +1,7 @@
+{{ 'Hey' }}
+{% for owl in all_users %}
+    <div>
+        <div>{{ owl.name }}</div>
+        <img src="/static/{{ owl.picture }}"></img>
+    </div>
+{% endfor %}
